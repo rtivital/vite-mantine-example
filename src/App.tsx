@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useListState } from "@mantine/hooks";
 import { Cross1Icon, PlusIcon } from "@modulz/radix-icons";
+import { RichTextEditor } from "@mantine/rte";
 import {
   Title,
   Text,
@@ -8,6 +9,7 @@ import {
   TextInput,
   ActionIcon,
   Container,
+  Portal,
   useMantineTheme,
 } from "@mantine/core";
 
@@ -95,6 +97,7 @@ export default function TodoList() {
 
   return (
     <Container size="xs">
+      <RichTextEditor value="" onChange={() => {}} />
       <Title style={{ textAlign: "center", marginBottom: theme.spacing.xl }}>
         Business Plan
       </Title>
@@ -129,6 +132,8 @@ export default function TodoList() {
           }
         }}
       />
+
+      <Portal>Hello</Portal>
     </Container>
   );
 }
